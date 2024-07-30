@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./styles/navBar.css";
 
 const NavBar = (props) => {
 	const { active } = props;
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
 
 	return (
 		<React.Fragment>
 			<div className="nav-container">
 				<nav className="navbar">
 					<div className="nav-background">
-						<ul className="nav-list">
+						<div className={`hamburger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+							<div className="bar"></div>
+							<div className="bar"></div>
+							<div className="bar"></div>
+						</div>
+						<ul className={`nav-list ${isMenuOpen ? "open" : ""}`}>
 							<li
 								className={
 									active === "home"
@@ -19,7 +29,8 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/">Home</Link>
+								<a href="/"> &lt; </a>
+								<Link to="/"  onClick={toggleMenu} className="Link">Home</Link>
 							</li>
 							<li
 								className={
@@ -28,7 +39,8 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/about">About</Link>
+								<a href="/"> &lt; </a>
+								<Link to="/about" onClick={toggleMenu} className="Link">About</Link>
 							</li>
 							<li
 								className={
@@ -37,7 +49,8 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/projects">Projects</Link>
+								<a href="/"> &lt; </a>
+								<Link to="/projects" onClick={toggleMenu} className="Link">Projects</Link>
 							</li>
 							<li
 								className={
@@ -46,7 +59,8 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/articles">Articles</Link>
+								<a href="/"> &lt; </a>
+								<Link to="/articles" onClick={toggleMenu} className="Link">Articles</Link>
 							</li>
 							<li
 								className={
@@ -55,7 +69,8 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/contact">Contact</Link>
+								<a href="/"> &lt; </a>
+								<Link to="/contact" onClick={toggleMenu} className="Link">Contact</Link>
 							</li>
 						</ul>
 					</div>
