@@ -10,7 +10,9 @@
 .homepage-container {
 	padding-top: 25px;
 }
-
+.ElipseContainer{
+	display: none;
+}
 .homepage-first-area {
 	display: flex;
 	justify-content: space-between;
@@ -24,11 +26,11 @@
 }
 
 .homepage-title {
-	width: 85% !important;
+	width: 85%;
 }
 
 .homepage-subtitle {
-	width: 85% !important;
+	width: 85%;
 }
 
 .homepage-first-area-right-side {
@@ -107,7 +109,7 @@
 	}
 
 	.homepage-title {
-		width: 100% !important;
+		width: 100%;
 		margin-top: 20px;
 		order: 2;
 	}
@@ -146,5 +148,177 @@
 		flex-basis: auto;
 		margin-left: -25px;
 		margin-right: -25px;
+	}
+}
+
+@media (max-width: 768px) {
+	.homepage-first-area {
+		flex-direction: column;
+	}
+	.title{
+		width: 100% !important;
+		font-size: 22px !important;
+		color: black;
+		margin: 0 auto;
+	}
+
+
+	.homepage-title {
+		margin: 0 auto;
+		margin-left: 10px;
+		width: 100%;
+		text-align: center;
+		color: black;
+		font-size: 20px;
+		
+	}
+	.homepage-title h1{
+		font-weight: 700;
+		margin: 15px;
+		font-family: 'Poppins', sans-serif;
+		white-space: nowrap;
+	}
+	.ButtonsCV{
+		font-family: 'Poppins', sans-serif;
+		white-space: nowrap;
+	}
+	
+
+	.homepage-subtitle {
+	
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 23px;
+	}
+	.homepage-subtitle h2{
+		margin-left: 20px;
+		font-weight: 100;
+		margin: 15px;
+		font-family: 'Poppins', sans-serif;
+		color: black;
+		white-space: nowrap;
+		letter-spacing: 3px;
+	}
+	.subtitle{
+		margin: 0 auto;
+		margin-left: 9px;
+	}
+
+
+	.homepage-image-container {
+		width: 320px;
+		height: 320px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-left: 10px;
+	}
+
+	.homepage-after-title {
+		flex-direction: column;
+	}
+
+	.homepage-projects {
+		flex-basis: auto;
+	}
+
+	.homepage-articles {
+		flex-basis: auto;
+	}
+
+	.homepage-works {
+		flex-basis: auto;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+
+	.Names{
+		margin: 0 auto;
+		font-size: 30px;
+		margin-bottom: 10%;
+	}
+	.Names h1 {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 900;
+		margin: 0; /* Elimina márgenes predeterminados */
+	}
+	
+	.Names h1:first-child {
+		margin-bottom: -18px; /* Ajusta el espacio debajo del primer <h1> */
+	}
+	
+	.Names h1:last-child {
+		margin-top: 8px; /* Ajusta el espacio encima del segundo <h1> */
+	}
+	.Elipse{
+		position: relative;
+		left: 55%;
+		top: 30%;
+		width: 70%;
+		height: 70%;
+	}
+	.ElipseContainer{
+		display: block;
+		position: relative;
+		left: 5.4%;
+		width: 100%;
+		height: 300px; /* Ajusta la altura según sea necesario */
+		overflow: hidden; /* Oculta el desbordamiento */
+	}
+	.SectionFrida {
+		margin: 0 auto;
+		margin-top: 2%;
+		width: 80%;
+		height: 200px; /* Ajusta la altura según sea necesario */
+		position: relative;
+		
+	}
+	.FridaImg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 20px;
+		margin-top: 10%;
+	}
+
+	.Efe{
+		width: 26%;
+		bottom: 11%;
+		right: 25%;
+		z-index: 99;
+		position: relative;
+	}
+	.Eme{
+		width: 60%;
+		top: 60%;
+		bottom: 0%;
+		left: 34%;
+		z-index: 99;
+		position: relative;
+	}
+	.Vector{
+		width: 49%;
+		top: -6%;
+		bottom: 0%;
+		left: -26%;
+		right: 5%;
+		z-index: 99;
+		position: relative;
+	}
+	.DescriptionImg {
+		width: 80%;
+		margin-left: 13%;
+		margin-top: 30%;
+		font-family: 'Poppins', sans-serif;
+		text-align: center; /* Centra el texto horizontalmente */
+		font-size: 15px;
+		line-height: 1.5; /* Aumenta el espacio entre líneas */
+	}
+	
+	.DescriptionImg span {
+		font-weight: bold;
 	}
 }

@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-
-import Logo from "../components/common/logo";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
-import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
-
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
-
+import Elipse from "../img/Ellipse.svg";
+import Efe from "../img/fe.svg";
+import Eme from "../img/me.svg";
+import Frida from "../img/IMG_6795EDIT.jpg"
+import VextorLine from "../img/Vectorinfi.svg"
 import "./styles/homepage.css";
 
 const Homepage = () => {
@@ -82,115 +72,65 @@ const Homepage = () => {
 			<div className="page-content">
 				<NavBar active="home" />
 				<div className="content-wrapper">
-					<div className="homepage-logo-container">
-						
-					</div>
 
 					<div className="homepage-container">
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
-									{INFO.homepage.title}
+									<h1>Diseñando</h1>
+									<h1>tus visiones:</h1>
 								</div>
-
 								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
+									<h2>UX & UI y</h2>
+									<h2>diseño digital</h2>
 								</div>
 							</div>
 
-							<div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
-									</div>
-								</div>
+						</div>
+
+						<Stack spacing={2} sx={{ alignItems: "center", marginTop:"50px"}}>
+							<Button variant="contained" sx={{
+								width: "70%",
+								height: "45px",
+								color: "white",
+								backgroundColor: "black",
+								border: "2px"
+
+
+							}}
+								className="ButtonsCV">Mis Proyectos</Button>
+							<Button variant="outlined" sx={{
+								width: "70%",
+								height: "45px",
+								borderColor: "black",
+								color: "black",
+								border: "2px black solid"
+
+							}} className="ButtonsCV">Mi CV</Button>
+						</Stack>
+
+						<section className="NameSection">
+
+							<div className="ElipseContainer">
+							<img src={Elipse} alt=""  className="Elipse"/>
+
 							</div>
-						</div>
-
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
-						</div>
-
-						<div className="homepage-projects">
-							<AllProjects />
-						</div>
-
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
+							<div className="Names">
+							<h1>FRIDA</h1>
+							<h1>MOLINA</h1>
+							<section className="SectionFrida">
+								<img src={Efe} className="Efe" alt="" />
+								<img src={Eme} className="Eme" alt="" />
+								<img src={VextorLine} className="Vector" alt="" />
+							<img src={Frida} alt="" className="FridaImg" />
+							</section>
+							<section className="DescriptionImg">
+								<p>
+								Apasionado por el <span>diseño web</span> y enfocado en la experiencia de usuario, <span>co-fundadora</span> de "Insurrekta", actualmente trabajando en la industria de diseño digital por más 2 años consecutivos.
+								</p>
+							</section>
 							</div>
-
-							<div className="homepage-works">
-								<Works />
-							</div>
-						</div>
-
+						</section>
 						<div className="page-footer">
 							<Footer />
 						</div>
