@@ -1,0 +1,18 @@
+.Cart{
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    border: 1px red solid;
+}
+
+.Cart h2{
+    font-size: 20px;
+}
+.ImgContainer{
+
+    width: 100px;
+    height: 100px;
+
+}

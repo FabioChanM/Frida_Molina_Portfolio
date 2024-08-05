@@ -11,6 +11,7 @@ import Efe from "../img/fe.svg";
 import Eme from "../img/me.svg";
 import Frida from "../img/IMG_6795EDIT.jpg"
 import VextorLine from "../img/Vectorinfi.svg"
+import ProjectsSection from "./Project.jsx"
 import "./styles/homepage.css";
 
 const Homepage = () => {
@@ -128,7 +129,16 @@ const Homepage = () => {
 								<p>
 								Apasionado por el <span>diseño web</span> y enfocado en la experiencia de usuario, <span>co-fundadora</span> de "Insurrekta", actualmente trabajando en la industria de diseño digital por más 2 años consecutivos.
 								</p>
+								<Button variant="contained" sx={{
+								width: "70%",
+								height: "45px",
+								color: "white",
+								backgroundColor: "black",
+								border: "2px"
+							}}
+								className="ButtonsCV">Mis Proyectos</Button>
 							</section>
+							<ProjectsSection/>
 							</div>
 						</section>
 						<div className="page-footer">
