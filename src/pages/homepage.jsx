@@ -136,7 +136,7 @@ const Homepage = () => {
 								backgroundColor: "black",
 								border: "2px"
 							}}
-								className="ButtonsCV">Mis Proyectos</Button>
+								className="ButtonsCV">Contáctame</Button>
 							</section>
 							<ProjectsSection/>
 							</div>

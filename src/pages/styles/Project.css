@@ -1,18 +1,35 @@
 .Cart{
     margin: 0 auto;
     margin-top: 10%;
-    width: 200px;
+    width: 250px;
     height: 300px;
     text-align: center;
-    border: 1px red solid;
+    justify-content: center;
+    border: 1px black solid;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .Cart h2{
     font-size: 20px;
 }
 .ImgContainer{
-
+    margin-left: 11%;
     width: 100px;
     height: 100px;
 
+}
+.GenderLogo{
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
+}
+.text{
+    font-size: 16px;
+    text-align: left;
+    padding-left: 5%;
+    margin-bottom: 20px;
+}
+span{
+    font-weight: bold;
 }

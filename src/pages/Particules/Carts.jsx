@@ -1,22 +1,40 @@
-import React, { useEffect } from "react";
+// src/components/Cart.jsx
+import React from "react";
 import "../styles/Project.css";
-import GFLOGO from "../img/Título_GF.svg";
+import Button from '@mui/material/Button';
 
-const Cart = () => {
-	return (
-			<div className="Cart">
-				<div className="ImgContainer">
-				<img src={GFLOGO} alt="" />
-				</div>
-				
+const Cart = ({ text, buttonText, image }) => {
+  return (
+    <div className="Cart">
+      <div className="ImgContainer">
+        <img src={image} alt="" className="GenderLogo" />
+      </div>
 
-				<h2>GERNDERFLOOW</h2>
+      <section className="text">
+        {text.map((segment, index) => (
+          <span key={index} style={{ fontWeight: segment.bold ? 'bold' : 'normal' }}>
+            {segment.content}
+          </span>
+        ))}
+      </section>
 
-
-
-
-		
-			</div>
-	);
+      <Button
+        variant="contained"
+        sx={{
+          width: "70%",
+          height: "45px",
+          color: "white",
+          backgroundColor: "white",
+          border: "2px",
+          color: "black",
+          border: "1px black solid"
+        }}
+        className="ButtonsCV"
+      >
+       {buttonText}
+      </Button>
+    </div>
+  );
 };
+
 export default Cart;
